@@ -1671,4 +1671,15 @@ inline void InitEnglishTable(std::unordered_map<int, const char*>& table) {
     table[static_cast<int>(LK::UI_The_driver_got_flips_without_usable_pacing_info)] = "The driver got flips without usable pacing info.";
     table[static_cast<int>(LK::UI_The_driver_has_no_pacing_config_for_the_swapchain)] = "The driver has no pacing config for the swapchain.";
     table[static_cast<int>(LK::UI_The_driver_hasn_t_reported_on_the_flips_yet)] = "The driver hasn't reported on the flips yet.";
+    table[static_cast<int>(LK::UI_None)] = "None";
+    table[static_cast<int>(LK::UI_Strength)] = "Strength";
+    table[static_cast<int>(LK::UI_Method)] = "Method";
+    table[static_cast<int>(LK::UI_Neural_BaBa)] = "Neural (BaBa)";
+    table[static_cast<int>(LK::UI_Quirks_and_ASI)] = "Quirks and ASI";
+    table[static_cast<int>(LK::UI_ASI)] = "ASI";
+    table[static_cast<int>(LK::UI_Quirks)] = "Quirks";
+    table[static_cast<int>(LK::UI_OptiSharpen)] = "OptiSharpen";
+    table[static_cast<int>(LK::VK_Check_Unable)] = "Unable to check for updates.";
+    table[static_cast<int>(LK::VK_Check_Unknown_Format)] = "Received an unknown version format from update server.";
+    table[static_cast<int>(LK::VK_Check_Failed)] = "Update check failed.";
 }

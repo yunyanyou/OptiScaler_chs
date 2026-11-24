@@ -385,7 +385,7 @@ inline void InitChineseSimplifiedTable(std::unordered_map<int, const char*>& tab
     table[static_cast<int>(LK::HDR)] = "HDR";
     table[static_cast<int>(LK::Magnifier)] = "放大镜";
     table[static_cast<int>(LK::Positioning)] = "定位";
-    table[static_cast<int>(LK::Active_Quirks)] = "生效的 Quirks";
+    table[static_cast<int>(LK::Active_Quirks)] = "生效的特例";
     table[static_cast<int>(LK::Advanced_Settings)] = "高级设置";
     table[static_cast<int>(LK::Fix_for_games)] = "修复游戏忽略官方 DRS 限制的问题";
     table[static_cast<int>(LK::Resource_Barriers)] = "资源屏障";
@@ -1451,8 +1451,8 @@ inline void InitChineseSimplifiedTable(std::unordered_map<int, const char*>& tab
     table[static_cast<int>(LK::UI_Save_Settings_and_restart_the_game_XeFG_keeps_the_low_latenc)] = "保存设置并重启游戏：XeFG 会保留其启动时的低延迟输出";
     table[static_cast<int>(LK::UI_s_dx)] = "%s %dx";
     table[static_cast<int>(LK::UI_Loaded_ASI_Plugins)] = "已加载 ASI 插件";
-    table[static_cast<int>(LK::UI_Quirks_ASI)] = "Quirks / ASI";
-    table[static_cast<int>(LK::UI_Game_specific_quirks_applied_by_OptiScaler_and_loaded_ASI_pl)] = "由 OptiScaler 应用的游戏特定 Quirks 及已加载的 ASI 插件。";
+    table[static_cast<int>(LK::UI_Quirks_ASI)] = "特例 / ASI";
+    table[static_cast<int>(LK::UI_Game_specific_quirks_applied_by_OptiScaler_and_loaded_ASI_pl)] = "由 OptiScaler 应用的游戏特例及已加载的 ASI 插件。";
     table[static_cast<int>(LK::UI_Accept_HUDless_candidates_of_any_format)] = "接受任意格式的 HUDLess 候选";
     table[static_cast<int>(LK::UI_UI_Texture)] = "UI 纹理";
     table[static_cast<int>(LK::UI_Use_the_UI_texture_the_game_blends_on_the_frame_in_its_last_)] = "使用游戏在最后一轮计算通道中混合到帧上的 UI 纹理";
@@ -1577,7 +1577,7 @@ inline void InitChineseSimplifiedTable(std::unordered_map<int, const char*>& tab
     table[static_cast<int>(LK::UI_Menu_font)] = "菜单字体";
     table[static_cast<int>(LK::UI_Choose_a_Windows_system_font_or_enter_any_custom_ttf_otf_fil)] = "选择 Windows 系统字体或在下方输入任意自定义 .ttf/.otf 文件";
     table[static_cast<int>(LK::UI_Custom_Font_File)] = "自定义字体文件";
-    table[static_cast<int>(LK::UI_A_file_in_C_Windows_Fonts_or_a_full_path_Enter_applies_it)] = "C:\\\\Windows\\\\Fonts 中的文件或完整路径，按 Enter 应用";
+    table[static_cast<int>(LK::UI_A_file_in_C_Windows_Fonts_or_a_full_path_Enter_applies_it)] = "C:\\Windows\\Fonts 中的文件或完整路径，按 Enter 应用";
     table[static_cast<int>(LK::UI_Font_Size)] = "字体大小";
     table[static_cast<int>(LK::UI_Menu_font_size)] = "菜单字体大小";
     table[static_cast<int>(LK::UI_Before_the_overlay_s_scale_the_far_left_is_the_menu_s_font_s)] = "在覆盖层缩放之前，最左侧为菜单的字体大小";
@@ -1614,7 +1614,7 @@ inline void InitChineseSimplifiedTable(std::unordered_map<int, const char*>& tab
     table[static_cast<int>(LK::UI_FFX_Vk)] = "FFX Vk";
     table[static_cast<int>(LK::UI_FFX_Vk_SR)] = "FFX Vk SR";
     table[static_cast<int>(LK::UI_FFX_Vk_FG)] = "FFX Vk FG";
-    table[static_cast<int>(LK::UI_Custom_DLSSG_from_custom_s_dlssg)] = "自定义 DLSSG，来自 custom\\\\%s\\\\dlssg";
+    table[static_cast<int>(LK::UI_Custom_DLSSG_from_custom_s_dlssg)] = "自定义 DLSSG，来自 custom\\%s\\dlssg";
     table[static_cast<int>(LK::UI_Frame_Generation_s)] = "帧生成（%s）";
     table[static_cast<int>(LK::UI_Lemon_zest)] = "柠檬皮屑";
     table[static_cast<int>(LK::UI_If_UI_is_too_bright_disable_this_option)] = "如果 UI 过亮，请禁用此选项";
@@ -1683,4 +1683,15 @@ inline void InitChineseSimplifiedTable(std::unordered_map<int, const char*>& tab
     table[static_cast<int>(LK::UI_The_driver_got_flips_without_usable_pacing_info)] = "驱动程序在没有可用节奏控制信息的情况下完成了翻转。";
     table[static_cast<int>(LK::UI_The_driver_has_no_pacing_config_for_the_swapchain)] = "驱动程序没有针对交换链的节奏控制配置。";
     table[static_cast<int>(LK::UI_The_driver_hasn_t_reported_on_the_flips_yet)] = "驱动程序尚未报告翻转情况。";
+    table[static_cast<int>(LK::UI_None)] = "无";
+    table[static_cast<int>(LK::UI_Strength)] = "强度";
+    table[static_cast<int>(LK::UI_Method)] = "方法";
+    table[static_cast<int>(LK::UI_Neural_BaBa)] = "神经网络 (BaBa)";
+    table[static_cast<int>(LK::UI_Quirks_and_ASI)] = "特例与 ASI";
+    table[static_cast<int>(LK::UI_ASI)] = "ASI";
+    table[static_cast<int>(LK::UI_Quirks)] = "特例";
+    table[static_cast<int>(LK::UI_OptiSharpen)] = "OptiSharpen";
+    table[static_cast<int>(LK::VK_Check_Unable)] = "无法检查更新。";
+    table[static_cast<int>(LK::VK_Check_Unknown_Format)] = "更新服务器返回了未知的版本格式。";
+    table[static_cast<int>(LK::VK_Check_Failed)] = "检查更新失败。";
 }

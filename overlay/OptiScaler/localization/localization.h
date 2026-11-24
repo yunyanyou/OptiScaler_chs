@@ -1665,6 +1665,17 @@ enum class LK {
     UI_The_driver_got_flips_without_usable_pacing_info,
     UI_The_driver_has_no_pacing_config_for_the_swapchain,
     UI_The_driver_hasn_t_reported_on_the_flips_yet,
+    UI_None,
+    UI_Strength,
+    UI_Method,
+    UI_Neural_BaBa,
+    UI_Quirks_and_ASI,
+    UI_ASI,
+    UI_Quirks,
+    UI_OptiSharpen,
+    VK_Check_Unable,
+    VK_Check_Unknown_Format,
+    VK_Check_Failed,
     COUNT
 };
 

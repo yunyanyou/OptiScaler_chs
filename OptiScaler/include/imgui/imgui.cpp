@@ -5481,6 +5481,8 @@ void ImGui::NewFrame()
         for (ImFontAtlas* atlas : g.FontAtlases)
             atlas->Locked = true;
     SetupDrawListSharedData();
+    // FIX-CJK: 强制清空字体栈，保证 PushDefaultFont 的 Size==1 条件成立、SetCurrentFont 总会执行。
+    g.FontStack.clear();
     PushDefaultFont();
     IM_ASSERT(g.Font->IsLoaded());
 
