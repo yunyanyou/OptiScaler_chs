@@ -5723,9 +5723,8 @@ void MenuCommon::RenderFrameGenerationRuntimeSettings(RenderMenuContext& ctx)
             config->FGXeFGDebugView.reset();
         }
 
-        const bool restartNeeded = config->FGXeFGDepthInverted.value_or_default() != fgOutput->IsInvertedDepth() ||
-                                   config->FGXeFGJitteredMV.value_or_default() != fgOutput->IsJitteredMVs() ||
-                                   config->FGXeFGHighResMV.value_or_default() == fgOutput->IsLowResMV();
+        // Runtime XeFG flags are not persisted to ini; avoid misleading restart prompt
+        const bool restartNeeded = false;
 
         bool cantActivate = false;
         if (restartNeeded)
