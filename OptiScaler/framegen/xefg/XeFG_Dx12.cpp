@@ -523,17 +523,6 @@ bool XeFG_Dx12::CreateSwapchain1Internal(IDXGIFactory* factory, ID3D12CommandQue
                                                          factory12, &params);
     }
 
-    if (result != XEFG_SWAPCHAIN_RESULT_SUCCESS && params.initFlags != XEFG_SWAPCHAIN_INIT_FLAG_NONE)
-    {
-        LOG_WARN("D3D12InitFromSwapChainDesc failed ({}), retrying with default initFlags", (UINT) result);
-        params.initFlags = XEFG_SWAPCHAIN_INIT_FLAG_NONE;
-#ifndef DONT_USE_XMX
-        ScopedSkipSpoofingGlobal skipSpoofingGlobal {};
-#endif // !DONT_USE_XMX
-        result = XeFGProxy::D3D12InitFromSwapChainDesc()(_swapChainContext, hwnd, desc, pFullscreenDesc, realQueue,
-                                                         factory12, &params);
-    }
-
     if (result != XEFG_SWAPCHAIN_RESULT_SUCCESS)
     {
         LOG_ERROR("D3D12InitFromSwapChainDesc error: {} ({})", magic_enum::enum_name(result), (UINT) result);
