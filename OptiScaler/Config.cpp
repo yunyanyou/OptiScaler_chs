@@ -1491,9 +1491,10 @@ bool Config::SaveIni()
         ini.SetValue("XeFG", "IgnoreInitChecks",
                      GetBoolValue(Instance()->FGXeFGIgnoreInitChecks.value_for_config()).c_str());
         ini.SetValue("XeFG", "UIComposition", GetBoolValue(Instance()->FGXeFGUIComposition.value_for_config()).c_str());
-        ini.SetValue("XeFG", "DepthInverted", GetBoolValue(Instance()->FGXeFGDepthInverted.value_for_config()).c_str());
-        ini.SetValue("XeFG", "JitteredMV", GetBoolValue(Instance()->FGXeFGJitteredMV.value_for_config()).c_str());
-        ini.SetValue("XeFG", "HighResMV", GetBoolValue(Instance()->FGXeFGHighResMV.value_for_config()).c_str());
+        // Do not persist runtime-probed XeFG flags to prevent restart init crashes
+        // ini.SetValue("XeFG", "DepthInverted", GetBoolValue(Instance()->FGXeFGDepthInverted.value_for_config()).c_str());
+        // ini.SetValue("XeFG", "JitteredMV", GetBoolValue(Instance()->FGXeFGJitteredMV.value_for_config()).c_str());
+        // ini.SetValue("XeFG", "HighResMV", GetBoolValue(Instance()->FGXeFGHighResMV.value_for_config()).c_str());
         ini.SetValue("XeFG", "DebugView", GetBoolValue(Instance()->FGXeFGDebugView.value_for_config()).c_str());
         ini.SetValue("XeFG", "ForceBorderless",
                      GetBoolValue(Instance()->FGXeFGForceBorderless.value_for_config()).c_str());
@@ -2156,9 +2157,10 @@ bool Config::SaveXeFG()
 {
     std::lock_guard<std::recursive_mutex> lock(iniMutex);
 
-    ini.SetValue("XeFG", "DepthInverted", GetBoolValue(Instance()->FGXeFGDepthInverted.value_for_config()).c_str());
-    ini.SetValue("XeFG", "JitteredMV", GetBoolValue(Instance()->FGXeFGJitteredMV.value_for_config()).c_str());
-    ini.SetValue("XeFG", "HighResMV", GetBoolValue(Instance()->FGXeFGHighResMV.value_for_config()).c_str());
+    // Do not persist runtime-probed XeFG flags to prevent restart init crashes
+    // ini.SetValue("XeFG", "DepthInverted", GetBoolValue(Instance()->FGXeFGDepthInverted.value_for_config()).c_str());
+    // ini.SetValue("XeFG", "JitteredMV", GetBoolValue(Instance()->FGXeFGJitteredMV.value_for_config()).c_str());
+    // ini.SetValue("XeFG", "HighResMV", GetBoolValue(Instance()->FGXeFGHighResMV.value_for_config()).c_str());
 
     auto pathWStr = absoluteFileName.wstring();
     LOG_INFO("Trying to save ini to: {0}", wstring_to_string(pathWStr));
