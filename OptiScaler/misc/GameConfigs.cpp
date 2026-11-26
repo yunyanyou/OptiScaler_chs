@@ -238,6 +238,13 @@ const std::vector<GameConfig> gameConfigs = {
         .defaults = { UseNtdllHooks = false },
     },
 
+    // Azur Promilia
+    // Kernel hooks required to hook DXGI/D3D12 when loaded via non-dxgi proxy
+    {
+        .exes = { "azurpromilia.exe" },
+        .defaults = { UseNtdllHooks = false },
+    },
+
     // Zenless Zone Zero
     // IgnoreTagsWithoutHudlessForFG fixes flipped Unity MVs/Depth
     {
