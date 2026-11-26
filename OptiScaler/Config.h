@@ -544,7 +544,7 @@ class Config
     CustomOptional<bool, SoftDefault> CreateD3D12DeviceForLuma { false };
 
     // Upscalers
-    CustomOptional<Upscaler, SoftDefault> Dx11Upscaler { Upscaler::FSR22 };
+    CustomOptional<Upscaler, SoftDefault> Dx11Upscaler { Upscaler::FSR31 };
     CustomOptional<Upscaler, SoftDefault> Dx12Upscaler { Upscaler::XeSS };
     CustomOptional<Upscaler, SoftDefault> VulkanUpscaler { Upscaler::FSR22 };
 
