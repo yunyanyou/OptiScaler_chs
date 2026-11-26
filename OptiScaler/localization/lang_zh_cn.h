@@ -861,7 +861,7 @@ inline void InitChineseSimplifiedTable(std::unordered_map<int, const char*>& tab
     table[static_cast<int>(LK::UI_How_long_to_spin_if_FPTHybridSpin_is_true_Measured_in_timer)] = "FPTHybridSpin 为 true 时的旋转时长。以计时器分辨率单位测量。\n";
     table[static_cast<int>(LK::UI_resolution_units_n)] = "不建议低于 2。会导致频繁过冲";
     table[static_cast<int>(LK::UI_Not_recommended_to_go_below_2_Will_result_in_frequent_oversh)] = "重启游戏以应用正确的 XeFG 设置！";
-    table[static_cast<int>(LK::UI_Restart_the_game_to_apply_correct_XeFG_settings)] = "需要禁用膨胀运动矢量";
+    table[static_cast<int>(LK::UI_Restart_the_game_to_apply_correct_XeFG_settings)] = "重启游戏以应用正确的 XeFG 设置";
     table[static_cast<int>(LK::UI_Requires_disabling_dilated_motion_vectors)] = "需要无边框显示模式！";
     table[static_cast<int>(LK::UI_Borderless_display_mode_required)] = "XeFG 仅支持 HDR10";
     table[static_cast<int>(LK::UI_XeFG_only_supports_HDR10)] = "忽略 XeFG 的所有预检查\n";
