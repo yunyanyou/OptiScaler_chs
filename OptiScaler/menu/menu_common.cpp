@@ -11161,13 +11161,14 @@ void MenuCommon::Init(HWND InHwnd, bool isUWP)
         if (Config::Instance()->FontSize.has_value())
             fontSize = Config::Instance()->FontSize.value();
 
-        if (Config::Instance()->TTFFontPath.has_value())
+        if (Config::Instance()->TTFFontPath.has_value() &&
+            std::filesystem::exists(Config::Instance()->TTFFontPath.value()))
         {
             io.FontDefault =
                 atlas->AddFontFromFileTTF(wstring_to_string(Config::Instance()->TTFFontPath.value()).c_str(), fontSize,
                                           &fontConfig, io.Fonts->GetGlyphRangesDefault());
         }
-        else
+        if (io.FontDefault == nullptr)
         {
             io.FontDefault = atlas->AddFontFromMemoryCompressedBase85TTF(hack_compressed_compressed_data_base85,
                                                                          fontSize, &fontConfig);
